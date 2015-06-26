@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:12345/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfTradeRecordSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeRecordSE" nillable="true" type="tns:TradeRecordSE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeRecordSE" nillable="true" type="tns:ArrayOfTradeRecordSE" />
+  <xs:complexType name="TradeRecordSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClosePrice" type="xs:double" />
+      <xs:element minOccurs="0" name="CloseTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Cmd" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Commission" type="xs:double" />
+      <xs:element minOccurs="0" name="Digits" type="xs:int" />
+      <xs:element minOccurs="0" name="Expiration" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Login" type="xs:int" />
+      <xs:element minOccurs="0" name="MarginRate" type="xs:double" />
+      <xs:element minOccurs="0" name="OpenPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="OpenTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="Profit" type="xs:double" />
+      <xs:element minOccurs="0" name="Spread" type="xs:int" />
+      <xs:element minOccurs="0" name="StopLoss" type="xs:double" />
+      <xs:element minOccurs="0" name="Storage" type="xs:double" />
+      <xs:element minOccurs="0" name="Symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TakeProfit" type="xs:double" />
+      <xs:element minOccurs="0" name="Taxes" type="xs:double" />
+      <xs:element minOccurs="0" name="Timestamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Volume" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeRecordSE" nillable="true" type="tns:TradeRecordSE" />
+  <xs:complexType name="MarginLevelSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Balance" type="xs:double" />
+      <xs:element minOccurs="0" name="Equity" type="xs:double" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LevelType" type="xs:int" />
+      <xs:element minOccurs="0" name="Leverage" type="xs:int" />
+      <xs:element minOccurs="0" name="Login" type="xs:int" />
+      <xs:element minOccurs="0" name="Margin" type="xs:double" />
+      <xs:element minOccurs="0" name="MarginFree" type="xs:double" />
+      <xs:element minOccurs="0" name="MarginLevel" type="xs:double" />
+      <xs:element minOccurs="0" name="MarginType" type="xs:int" />
+      <xs:element minOccurs="0" name="Updated" type="xs:int" />
+      <xs:element minOccurs="0" name="Volume" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarginLevelSE" nillable="true" type="tns:MarginLevelSE" />
+  <xs:complexType name="ArrayOfSymbolInfoSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SymbolInfoSE" nillable="true" type="tns:SymbolInfoSE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSymbolInfoSE" nillable="true" type="tns:ArrayOfSymbolInfoSE" />
+  <xs:complexType name="SymbolInfoSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ask" type="xs:double" />
+      <xs:element minOccurs="0" name="Bid" type="xs:double" />
+      <xs:element minOccurs="0" name="CommType" type="xs:int" />
+      <xs:element minOccurs="0" name="Commission" type="xs:double" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Digits" type="xs:int" />
+      <xs:element minOccurs="0" name="Direction" type="xs:int" />
+      <xs:element minOccurs="0" name="High" type="xs:double" />
+      <xs:element minOccurs="0" name="LastTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Low" type="xs:double" />
+      <xs:element minOccurs="0" name="Point" type="xs:double" />
+      <xs:element minOccurs="0" name="Spread" type="xs:int" />
+      <xs:element minOccurs="0" name="SpreadBalance" type="xs:int" />
+      <xs:element minOccurs="0" name="Symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+      <xs:element minOccurs="0" name="Updateflag" type="xs:int" />
+      <xs:element minOccurs="0" name="Visible" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SymbolInfoSE" nillable="true" type="tns:SymbolInfoSE" />
+  <xs:complexType name="UserRecordSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentAccount" type="xs:int" />
+      <xs:element minOccurs="0" name="Balance" type="xs:double" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Credit" type="xs:double" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enable" type="xs:int" />
+      <xs:element minOccurs="0" name="EnableChangePassword" type="xs:int" />
+      <xs:element minOccurs="0" name="EnableReadOnly" type="xs:int" />
+      <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterestRate" type="xs:double" />
+      <xs:element minOccurs="0" name="LastIp" type="xs:int" />
+      <xs:element minOccurs="0" name="Lastdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Leverage" type="xs:int" />
+      <xs:element minOccurs="0" name="Login" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PasswordInvestor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PasswordPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrevEquity" type="xs:double" />
+      <xs:element minOccurs="0" name="PrevMonthEquity" type="xs:double" />
+      <xs:element minOccurs="0" name="Prevbalance" type="xs:double" />
+      <xs:element minOccurs="0" name="Prevmonthbalance" type="xs:double" />
+      <xs:element minOccurs="0" name="Regdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Taxes" type="xs:double" />
+      <xs:element minOccurs="0" name="Timestamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Zipcode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRecordSE" nillable="true" type="tns:UserRecordSE" />
+  <xs:complexType name="MT4OperResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReturnValue" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MT4OperResult" nillable="true" type="tns:MT4OperResult" />
+  <xs:simpleType name="EnumMT4Stats">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="ByYear" />
+      <xs:enumeration value="ByMonth" />
+      <xs:enumeration value="ByWeek" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumMT4Stats" nillable="true" type="tns:EnumMT4Stats" />
+  <xs:complexType name="ArrayOfMT4HistoryStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MT4HistoryStats" nillable="true" type="tns:MT4HistoryStats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMT4HistoryStats" nillable="true" type="tns:ArrayOfMT4HistoryStats" />
+  <xs:complexType name="MT4HistoryStats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LoseCount" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxLoss" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxLots" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxProfit" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxTime" type="ser:duration" />
+      <xs:element minOccurs="0" name="MaxVolume" type="xs:int" />
+      <xs:element minOccurs="0" name="Profit" type="xs:double" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StatsType" type="tns:EnumMT4Stats" />
+      <xs:element minOccurs="0" name="TradeCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Volume" type="xs:int" />
+      <xs:element minOccurs="0" name="WinCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MT4HistoryStats" nillable="true" type="tns:MT4HistoryStats" />
+  <xs:complexType name="TradeTransInfoSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cmd" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Crc" type="xs:int" />
+      <xs:element minOccurs="0" name="Expiration" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IeDeviation" type="xs:int" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderBy" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="StopLoss" type="xs:double" />
+      <xs:element minOccurs="0" name="Symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TakeProfit" type="xs:double" />
+      <xs:element minOccurs="0" name="Volume" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeTransInfoSE" nillable="true" type="tns:TradeTransInfoSE" />
+  <xs:complexType name="TradeRecoredModifyModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClosePrice" type="xs:double" />
+      <xs:element minOccurs="0" name="CloseTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OpenTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderTicket" type="xs:int" />
+      <xs:element minOccurs="0" name="Sl" type="xs:double" />
+      <xs:element minOccurs="0" name="TP" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeRecoredModifyModel" nillable="true" type="tns:TradeRecoredModifyModel" />
+</xs:schema>
