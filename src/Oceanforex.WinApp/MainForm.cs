@@ -191,10 +191,20 @@ namespace Oceanforex.WinApp
                                             if (isprofit % 2 == 0) // 需要盈利
                                             {
                                                 closePrice = GetPrice((double)openPrice, price.High);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                             else
                                             {
                                                 closePrice = GetPrice(price.Low, (double)openPrice);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                         }
                                         else
@@ -202,10 +212,20 @@ namespace Oceanforex.WinApp
                                             if (isprofit % 2 == 0) // 需要盈利
                                             {
                                                 closePrice = GetPrice((double)openPrice, price.High);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                             else
                                             {
                                                 closePrice = GetPrice(price.Low, (double)openPrice);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                         }
 
@@ -219,10 +239,20 @@ namespace Oceanforex.WinApp
                                             if (isprofit % 2 == 0) // 需要盈利
                                             {
                                                 closePrice = GetPrice(price.Low, (double)openPrice);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                             else
                                             {
                                                 closePrice = GetPrice((double)openPrice, price.High);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                         }
                                         else
@@ -230,10 +260,20 @@ namespace Oceanforex.WinApp
                                             if (isprofit % 2 == 0) // 需要盈利
                                             {
                                                 closePrice = GetPrice(price.Low, (double)openPrice);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                             else
                                             {
                                                 closePrice = GetPrice((double)openPrice, price.High);
+                                                if (openPrice == closePrice)
+                                                {
+                                                    closePrice = openPrice + (openPrice * (decimal)0.01);
+                                                    _log.Info("重新生成平仓价(1)：" + closePrice);
+                                                }
                                             }
                                         }
                                     }
