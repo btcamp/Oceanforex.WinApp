@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:12345/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" />
+  <xs:import schemaLocation="http://localhost:12345/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:12345/?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" />
+  <xs:element name="GetAllOpenTrade">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOpenTradeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetAllOpenTradeResult" nillable="true" type="q1:ArrayOfTradeRecordSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenTrade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+        <xs:element minOccurs="0" name="group" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenTradeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetOpenTradeResult" nillable="true" type="q2:ArrayOfTradeRecordSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenTradeByLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpenTradeByLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetOpenTradeByLoginResult" nillable="true" type="q3:ArrayOfTradeRecordSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarginLevel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarginLevelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetMarginLevelResult" nillable="true" type="q4:MarginLevelSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeUserPasswordCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeUserPasswordCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TradeUserPasswordCheckResult" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradesRecordHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+        <xs:element minOccurs="0" name="from" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="to" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTradesRecordHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetTradesRecordHistoryResult" nillable="true" type="q5:ArrayOfTradeRecordSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSymbolInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllSymbolInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetAllSymbolInfoResult" nillable="true" type="q6:ArrayOfSymbolInfoSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRecordsByLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRecordsByLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetUserRecordsByLoginResult" nillable="true" type="q7:UserRecordSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="userRecord" nillable="true" type="q8:UserRecordSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="NewUserResult" nillable="true" type="q9:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="group" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="investorPwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="CreateAccountResult" nillable="true" type="q10:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeTranscationBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+        <xs:element minOccurs="0" name="balance" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeTranscationBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="TradeTranscationBalanceResult" nillable="true" type="q11:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="ChangePasswordResult" nillable="true" type="q12:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordInvestor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordInvestorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="ChangePasswordInvestorResult" nillable="true" type="q13:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllGroup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAllGroupResult" nillable="true" type="q14:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryStats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+        <xs:element minOccurs="0" name="startTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endTime" type="xs:dateTime" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="statsSort" type="q15:EnumMT4Stats" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoryStatsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetHistoryStatsResult" nillable="true" type="q16:ArrayOfMT4HistoryStats" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSymbolInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="symbol" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSymbolInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="GetSymbolInfoResult" nillable="true" type="q17:SymbolInfoSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeTranscationOpen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="ttim" nillable="true" type="q18:TradeTransInfoSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeTranscationOpenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="TradeTranscationOpenResult" nillable="true" type="q19:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeOpenAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" minOccurs="0" name="trades" nillable="true" type="q20:ArrayOfTradeOpenModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeOpenAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" minOccurs="0" name="TradeOpenAllResult" nillable="true" type="q21:ArrayOfTradeOpenRsponseModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeTranscationClose">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderTicket" type="xs:int" />
+        <xs:element minOccurs="0" name="price" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeTranscationCloseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="TradeTranscationCloseResult" nillable="true" type="q22:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeCloseAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" minOccurs="0" name="closes" nillable="true" type="q23:ArrayOfTradeCloseModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeCloseAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" minOccurs="0" name="TradeCloseAllResult" nillable="true" type="q24:ArrayOfTradeCloseResponseModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeModifyAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" minOccurs="0" name="modifys" nillable="true" type="q25:ArrayOfTradeModifyModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeModifyAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" minOccurs="0" name="TradeModifyAllResult" nillable="true" type="q26:ArrayOfTradeModifyResponseModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeDeleteAllHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TradeDeleteAllHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="TradeDeleteAllHistoryResult" nillable="true" type="q27:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmTradeRecordModifyTimeAndPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_orderTicket" type="xs:int" />
+        <xs:element minOccurs="0" name="_openTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_openPrice" type="xs:double" />
+        <xs:element minOccurs="0" name="_closeTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_closePrice" type="xs:double" />
+        <xs:element minOccurs="0" name="_profit" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmTradeRecordModifyTimeAndPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="AdmTradeRecordModifyTimeAndPriceResult" nillable="true" type="q28:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmTradeRecordModifyTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_orderTicket" type="xs:int" />
+        <xs:element minOccurs="0" name="_openTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_closeTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmTradeRecordModifyTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="AdmTradeRecordModifyTimeResult" nillable="true" type="q29:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmTradeRecordModify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="model" nillable="true" type="q30:TradeRecoredModifyModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmTradeRecordModifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="AdmTradeRecordModifyResult" nillable="true" type="q31:MT4OperResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmUsersRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="group" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdmUsersRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" minOccurs="0" name="AdmUsersRequestResult" nillable="true" type="q32:ArrayOfUserRecordSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
