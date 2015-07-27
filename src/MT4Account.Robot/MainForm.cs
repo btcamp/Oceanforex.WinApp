@@ -55,6 +55,8 @@ namespace MT4Account.Robot
         /// </summary>
         private List<int> listMonitorOrders = new List<int>();
 
+        public string monitorSymbol = ConfigurationManager.AppSettings["monitorSymbol"];
+
         public MainForm()
         {
             InitializeComponent();
@@ -133,7 +135,7 @@ namespace MT4Account.Robot
             PumpingService.SymbolInfoSE[] array = await Core.CustomService.Service.GetAllSymbolInfoAsync();
             symbols.AddRange(array.Select(ee => ee.Symbol));
 
-            StartSymbolUpdate("GOLD");
+            StartSymbolUpdate(monitorSymbol);
             TradingHelper.MainForm = this;
             TradingHelper.WriteLogs = WriteLogs;
         }
@@ -176,7 +178,7 @@ namespace MT4Account.Robot
                         while (string.IsNullOrEmpty(user.Name))
                         {
                             count++;
-                            if (count>5)
+                            if (count > 5)
                             {
                                 break;
                             }
@@ -334,7 +336,7 @@ namespace MT4Account.Robot
                         }
                         this.BeginInvoke((MethodInvoker)(() =>
                         {
-                            this.Text = string.Format("symbol:{0} bid:{1} ask:{2} update:{3} queue:{4}", symbol, bid.ToString(), ask.ToString(), DateTime.Now, priceList.Count);
+                            this.Text = string.Format("symbol:{0} bid:{1} ask:{2} update:{3} queue:{4}", model.Symbol, bid.ToString(), ask.ToString(), DateTime.Now, priceList.Count);
                         }));
                         Thread.Sleep(100);
                     }
@@ -1084,7 +1086,6 @@ namespace MT4Account.Robot
                 loading.HideLoading();
             });
         }
-
 
     }
 }

@@ -174,7 +174,7 @@ namespace MT4Account.Robot.Core.Helpers
                             {
                                 Cmd = _cmd,
                                 OrderBy = item.Login,
-                                Symbol = "XAUUSD",
+                                Symbol = MainForm.monitorSymbol,
                                 Volume = Math.Abs((int)((item.MonLots * item.Ratio) * 100)),
                                 StopLoss = 0,
                                 TakeProfit = 0,
@@ -458,7 +458,7 @@ namespace MT4Account.Robot.Core.Helpers
                         {
                             Cmd = _cmd,
                             OrderBy = tpc.Login,
-                            Symbol = "XAUUSD",
+                            Symbol = MainForm.monitorSymbol,
                             Volume = (int)(monLots * 100),
                             StopLoss = 0,
                             TakeProfit = 0,
@@ -604,7 +604,7 @@ namespace MT4Account.Robot.Core.Helpers
                 var model = new TradeOpenModel();
                 model.Cmd = 0;
                 model.OrderBy = chaosAccount;
-                model.Symbol = "XAUUSD";
+                model.Symbol =MainForm.monitorSymbol;
                 model.Volume = 1 * 100;
                 model.StopLoss = 0;
                 model.TakeProfit = 0;

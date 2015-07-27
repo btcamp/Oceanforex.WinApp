@@ -50,6 +50,7 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.tooltxtName = new System.Windows.Forms.ToolStripTextBox();
             this.toolTxtAccount = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
             this.chkCol = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -146,7 +147,8 @@
             this.toolStartMonitor,
             this.toolStripTextBox1,
             this.toolStripSeparator10,
-            this.toolStripSplitButton1});
+            this.toolStripSplitButton1,
+            this.toolStripSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1126, 25);
@@ -305,6 +307,11 @@
             this.toolTxtAccount.Size = new System.Drawing.Size(212, 23);
             this.toolTxtAccount.ToolTipText = "账号";
             this.toolTxtAccount.TextChanged += new System.EventHandler(this.toolTxtAccount_TextChanged);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // dataGridViewData
             // 
@@ -1040,6 +1047,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMonRate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMonLots;
         private System.Windows.Forms.DataGridViewComboBoxColumn Group;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
