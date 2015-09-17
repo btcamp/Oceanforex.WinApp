@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MT4SymbolPumping.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://54.64.40.166:12345/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" />
+  <xs:complexType name="ArrayOfTradeOpenModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeOpenModel" nillable="true" type="tns:TradeOpenModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeOpenModel" nillable="true" type="tns:ArrayOfTradeOpenModel" />
+  <xs:complexType name="TradeOpenModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cmd" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Crc" type="xs:int" />
+      <xs:element minOccurs="0" name="Expiration" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IeDeviation" type="xs:int" />
+      <xs:element minOccurs="0" name="Order" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderBy" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="StopLoss" type="xs:double" />
+      <xs:element minOccurs="0" name="Symbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TakeProfit" type="xs:double" />
+      <xs:element minOccurs="0" name="Volume" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeOpenModel" nillable="true" type="tns:TradeOpenModel" />
+  <xs:complexType name="ArrayOfTradeOpenRsponseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeOpenRsponseModel" nillable="true" type="tns:TradeOpenRsponseModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeOpenRsponseModel" nillable="true" type="tns:ArrayOfTradeOpenRsponseModel" />
+  <xs:complexType name="TradeOpenRsponseModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" base="q1:MT4OperResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OpenModel" nillable="true" type="tns:TradeOpenModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TradeOpenRsponseModel" nillable="true" type="tns:TradeOpenRsponseModel" />
+  <xs:complexType name="ArrayOfTradeCloseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeCloseModel" nillable="true" type="tns:TradeCloseModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeCloseModel" nillable="true" type="tns:ArrayOfTradeCloseModel" />
+  <xs:complexType name="TradeCloseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderTicket" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeCloseModel" nillable="true" type="tns:TradeCloseModel" />
+  <xs:complexType name="ArrayOfTradeCloseResponseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeCloseResponseModel" nillable="true" type="tns:TradeCloseResponseModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeCloseResponseModel" nillable="true" type="tns:ArrayOfTradeCloseResponseModel" />
+  <xs:complexType name="TradeCloseResponseModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" base="q2:MT4OperResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CloseModel" nillable="true" type="tns:TradeCloseModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TradeCloseResponseModel" nillable="true" type="tns:TradeCloseResponseModel" />
+  <xs:complexType name="ArrayOfTradeModifyModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeModifyModel" nillable="true" type="tns:TradeModifyModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeModifyModel" nillable="true" type="tns:ArrayOfTradeModifyModel" />
+  <xs:complexType name="TradeModifyModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClosePrice" type="xs:double" />
+      <xs:element minOccurs="0" name="CloseTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderTicket" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeModifyModel" nillable="true" type="tns:TradeModifyModel" />
+  <xs:complexType name="ArrayOfTradeModifyResponseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeModifyResponseModel" nillable="true" type="tns:TradeModifyResponseModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeModifyResponseModel" nillable="true" type="tns:ArrayOfTradeModifyResponseModel" />
+  <xs:complexType name="TradeModifyResponseModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/MT4SymbolPumping" base="q3:MT4OperResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ModifyModel" nillable="true" type="tns:TradeModifyModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TradeModifyResponseModel" nillable="true" type="tns:TradeModifyResponseModel" />
+</xs:schema>

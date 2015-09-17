@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +55,11 @@
     <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\MT4Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Services\ApiService.cs" />
     <Compile Include="Services\Interface\IApiService.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -77,11 +83,80 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\MT4Service\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MT4Service\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MT4Service\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MT4Service\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MT4Service\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.MarginLevelSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.MT4HistoryStats.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.MT4OperResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.SymbolInfoSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.TradeCloseResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.TradeModifyResponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.TradeOpenRsponseModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.TradeRecordSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\Oceanforex.ApiService.MT4Service.UserRecordSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MT4Service\PumpService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MT4Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MT4Service\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MT4Service\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MT4Service\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MT4Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="emailtpl.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
